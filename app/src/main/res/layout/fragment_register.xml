@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        style="@style/StoryTextContent.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="@string/welcome_tag"
+        android:textSize="@dimen/dimen_24sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcomeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/StoryTextContent.EditTextTitle"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:text="@string/register_text"
+        android:textSize="@dimen/dimen_16sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeTitle" />
+
+    <TextView
+        android:id="@+id/tvNameTitle"
+        style="@style/StoryTextContent.EditTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_52dp"
+        android:layout_marginTop="@dimen/dimen_32dp"
+        android:text="@string/label_nama"
+        android:textSize="@dimen/dimen_14sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeDesc" />
+
+    <com.rinoindraw.storybismillah.ui.customview.StoryDefaultEditText
+        android:id="@+id/edtName"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        android:maxLines="1"
+        android:padding="@dimen/dimen_16dp"
+        android:hint="@string/your_name"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNameTitle"
+        style="@style/edit_text"/>
+
+    <TextView
+        android:id="@+id/tvEmailTitle"
+        style="@style/StoryTextContent.EditTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_52dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_email"
+        android:textSize="@dimen/dimen_14sp"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+    <com.rinoindraw.storybismillah.ui.customview.StoryEmailEditText
+        android:id="@+id/edtEmail"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        android:inputType="textEmailAddress"
+        android:padding="@dimen/dimen_16dp"
+        android:hint="@string/insert_email"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvEmailTitle"
+        style="@style/edit_text"/>
+
+    <TextView
+        android:id="@+id/tvPasswordTitle"
+        style="@style/StoryTextContent.EditTextTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_52dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:text="@string/label_password"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail" />
+
+    <com.rinoindraw.storybismillah.ui.customview.StoryPasswordEditText
+        android:id="@+id/edtPassword"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        android:inputType="textPassword"
+        android:padding="@dimen/dimen_16dp"
+        android:hint="@string/label_password"
+        android:alpha="0"
+        tools:alpha="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPasswordTitle"
+        style="@style/edit_text"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/action_register"
+        android:translationZ="0dp"
+        style="@style/button_style"
+        android:alpha="0"
+        tools:alpha="1"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+
+    <LinearLayout
+        android:id="@+id/layoutTextRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister">
+
+        <TextView
+            android:id="@+id/tvIsHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/button_style"
+            android:alpha="0"
+            tools:alpha="1"
+            android:textColor="@color/dark_blue_sky"
+            android:text="@string/label_is_have_account"/>
+
+        <TextView
+            android:id="@+id/tvToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/blue_sky"
+            style="@style/button_style"
+            android:alpha="0"
+            tools:alpha="1"
+            android:layout_marginStart="@dimen/dimen_4dp"
+            android:text="@string/action_to_login"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bg_dim"
+        android:visibility="gone"
+        android:background="@color/colorBlackDim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/dimen_2dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="@dimen/dimen_4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

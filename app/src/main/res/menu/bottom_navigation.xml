@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/titlebar"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_add_story"
+        android:icon="@drawable/baseline_add_box_24"
+        android:title="@string/create" />
+
+    <item
+        android:id="@+id/navigation_maps"
+        android:icon="@drawable/baseline_location_on_24"
+        android:title="@string/maps_title" />
+
+</menu>

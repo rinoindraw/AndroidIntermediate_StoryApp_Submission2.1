@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.story.detail.DetailStoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="2dp"
+            android:src="@drawable/baseline_arrow_back_ios_new_24"
+            android:contentDescription="@string/img_back"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGreetingName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvGreetingName" />
+
+        <TextView
+            android:id="@+id/tvGreetingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16dp"
+            android:fontFamily="@font/tilt_warp"
+            android:text="@string/title_detail_story"
+            android:textColor="@color/blue_sky"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imgBack"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/imgStoryThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"
+        tools:src="@drawable/image_tools"
+        tools:layout_height="250dp"
+        android:transitionName="content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvStoryTitle"
+        tools:text="Story Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dimen_24dp"
+        android:layout_marginVertical="@dimen/dimen_8dp"
+        android:textSize="@dimen/dimen_24sp"
+        android:transitionName="title"
+        style="@style/StoryTextContent.Title"/>
+
+    <TextView
+        android:id="@+id/tvStoryDesc"
+        tools:text="@string/label_lorem_ipsum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:transitionName="description"
+        style="@style/StoryTextContent.Desc"
+        android:layout_marginHorizontal="@dimen/dimen_16dp"/>
+
+</LinearLayout>
